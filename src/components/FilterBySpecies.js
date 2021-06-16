@@ -12,6 +12,7 @@ const FilterBySpecies = (props) => {
     <>
       {/* <label htmlFor="species">Filtrar por especie</label> */}
       <input
+        className="inputspecie"
         type="text"
         placeholder="Filtrar por especie"
         value={props.filterSpecies}

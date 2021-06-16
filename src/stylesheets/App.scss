@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+}
+.container {
+  width: 100vw;
+  // height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #151b1e;
+}
+
+.header-logo {
+  margin-right: auto;
+  margin-right: auto;
+}
+
+.list-characters {
+  // border: 2px solid red;
+  width: 100%;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  padding: 10px;
+}
+
+.character-card {
+  // border: 2px solid red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.info-character {
+  background-color: #01aec7;
+  color: white;
+  padding-left: 15px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.name {
+  font-weight: bold;
+  text-decoration: none;
+}
+.image {
+  width: 250px;
+  height: 250px;
+}
+.form-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.inputname {
+  border: 2px solid #b7d34d;
+  width: 200px;
+}
+
+.inputspecie {
+  border: 2px solid #b7d34d;
+  width: 200px;
+}

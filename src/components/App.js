@@ -5,6 +5,8 @@ import ls from "../services/localStorage";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
+import Header from "./Header";
+import "../stylesheets/App.scss";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -64,12 +66,15 @@ const App = () => {
     console.log(foundCharacter);
     if (foundCharacter !== undefined) {
       return <CharacterDetail character={foundCharacter} />;
+    } else {
+      return <p>Pruebe a buscar otro personaje</p>;
     }
   };
   return (
     <Switch>
-      <div>
+      <div className="container">
         <Route exact path="/">
+          <Header />
           <Filters
             handleFilter={handleFilter}
             filterName={filterName}

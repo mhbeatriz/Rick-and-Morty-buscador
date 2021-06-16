@@ -6,11 +6,14 @@ const CharacterCard = (props) => {
     <li>
       <Link to={`/character/${props.character.id}`}>
         <img
+          className="image"
           src={props.character.image}
           alt={`Foto de ${props.character.name}`}
         />
-        <h3>{props.character.name}</h3>
-        <p>{props.character.species}</p>
+        <section className="info-character">
+          <h3 className="name">{props.character.name}</h3>
+          <p className="species">{props.character.species}</p>
+        </section>
       </Link>
     </li>
   );
