@@ -13,20 +13,26 @@ const App = () => {
     ls.get("filterSpecies", "")
   );
 
+  //Llamada a la Api y ordenarla alfabéticamente
   useEffect(() => {
     if (characters.length === 0) {
       getDataFromAPI().then((data) => {
+        const orderAlpha = data.sort((a, b) =>
+          a.name > b.name ? 1 : a.name < b.name ? -1 : 0
+        );
         setCharacters(data);
       });
     }
   }, []);
 
+  //LocalStorage
   useEffect(() => {
     ls.set("characters", characters);
     ls.set("filterName", filterName);
     ls.set("filterSpecies", filterSpecies);
   }, [filterName, filterSpecies, characters]);
 
+  //Filtrar por nombre y especie
   function handleFilter(data) {
     if (data.key === "name") {
       return setFilterName(data.value);
@@ -49,6 +55,7 @@ const App = () => {
       }
     });
 
+  //Función para llamar al detalle de cada personaje
   const renderCharacterDetail = (props) => {
     const characterId = props.match.params.characterId;
     const foundCharacter = characters.find((character) => {
