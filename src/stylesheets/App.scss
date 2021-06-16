@@ -2,55 +2,71 @@
   margin: 0;
 }
 .container {
-  width: 100vw;
-  // height: 100vh;
+  // width: 100vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #151b1e;
 }
 
 .header-logo {
-  margin-right: auto;
-  margin-right: auto;
+  margin-top: 15px;
+  width: 300px;
+  @media all and (min-width: 768px) {
+    width: 620px;
+    height: 200px;
+  }
 }
 
 .list-characters {
   // border: 2px solid red;
-  width: 100%;
   list-style-type: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   padding: 10px;
+  @media all and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 .character-card {
   // border: 2px solid red;
-  width: 100%;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  // box-shadow: 2px 2px 2px #b7d34d;
+  border-radius: 5px;
+}
+.character-card:hover {
+  border: solid 4px #b7d34d;
 }
 .info-character {
   background-color: #01aec7;
   color: white;
   padding-left: 15px;
-  height: 60px;
+  height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translate(0, -10%);
 }
 .name {
   font-weight: bold;
   text-decoration: none;
 }
 .image {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 .form-container {
   height: 200px;
@@ -60,18 +76,141 @@
 }
 .form {
   width: 500px;
+  height: 120px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin-top: auto;
   margin-bottom: auto;
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .inputname {
   border: 2px solid #b7d34d;
+  border-radius: 5px;
   width: 200px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 18px;
 }
-
+.inputname:hover {
+  border: 5px solid #b7d34d;
+}
 .inputspecie {
   border: 2px solid #b7d34d;
+  border-radius: 5px;
   width: 200px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.inputspecie:hover {
+  border: 5px solid #b7d34d;
+}
+.containerdetail {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.detail {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  background-color: #01aec7;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  @media all and (min-width: 768px) {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.go-back {
+  color: white;
+  font-size: 14px;
+  @media all and (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+.go-back:hover {
+  color: #b7d34d;
+}
+
+.info {
+  color: white;
+  // width: 300px;
+}
+
+.name-detail {
+  font-weight: bold;
+  font-size: 14px;
+  @media all and (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.info-detail {
+  list-style-type: none;
+  font-size: 12px;
+  padding: 0;
+  margin-top: 10px;
+  @media all and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+.detail-list {
+  text-align: left;
+}
+.image-detail {
+  border-radius: 5px;
+  width: 150px;
+  height: 150px;
+  @media all and (min-width: 768px) {
+    width: 350px;
+    height: 350px;
+  }
+}
+.footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-top: solid 1px #b7d34d;
+  // border: red solid 2px;
+  @media all and(min-width:768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.copy {
+  color: white;
+  @media all and(min-width:768px) {
+    margin-left: 20px;
+  }
+}
+.logofooter {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  @media all and(min-width:768px) {
+    margin-right: 20px;
+  }
 }

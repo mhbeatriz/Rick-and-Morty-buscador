@@ -6,6 +6,7 @@ import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
 import Header from "./Header";
+import Footer from "./Footer";
 import "../stylesheets/App.scss";
 
 const App = () => {
@@ -83,6 +84,7 @@ const App = () => {
           <CharacterList characters={FilterCharacters} />
         </Route>
         <Route path="/character/:characterId" render={renderCharacterDetail} />
+        <Footer />
       </div>
     </Switch>
   );
