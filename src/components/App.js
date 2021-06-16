@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import getDataFromAPI from "../services/api";
+import ls from "../services/localStorage";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
@@ -10,10 +11,17 @@ const App = () => {
   const [filterName, setFilterName] = useState("");
 
   useEffect(() => {
-    getDataFromAPI().then((data) => {
-      setCharacters(data);
-    });
+    if (characters.length === 0) {
+      getDataFromAPI().then((data) => {
+        setCharacters(data);
+      });
+    }
   }, []);
+
+  useEffect(() => {
+    ls.set("characters", characters);
+    ls.set("filterName", filterName);
+  }, [filterName, characters]);
 
   function handleFilter(data) {
     if (data.key === "name") {
