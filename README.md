@@ -1,7 +1,7 @@
-# Buscador Rick and Morty Rick_and_Morty_-_logo_(English).png![Rick_and_Morty_-_logo_(English)](https://user-images.githubusercontent.com/81681226/122187895-c115ab00-ce8f-11eb-84e6-cabbf450b4f7.png)
+![Rick_and_Morty_-_logo_(English)](https://user-images.githubusercontent.com/81681226/122187895-c115ab00-ce8f-11eb-84e6-cabbf450b4f7.png)
 
 
-
+# Buscador Rick and Morty
 Se trata de una aplicación web para buscar tu personaje favorito de la serie Rick and Morty que podéis filtrar por nombre o especie.
 ¡Y no solo eso!
 Al hacer click en cada personaje se mostrara una ventana con el detalle de su información correspondiente.
