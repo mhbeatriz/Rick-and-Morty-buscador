@@ -8,7 +8,10 @@ import CharacterDetail from "./CharacterDetail";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
-  const [filterName, setFilterName] = useState("");
+  const [filterName, setFilterName] = useState(ls.get("filterName", ""));
+  const [filterSpecies, setFilterSpecies] = useState(
+    ls.get("filterSpecies", "")
+  );
 
   useEffect(() => {
     if (characters.length === 0) {
@@ -21,17 +24,30 @@ const App = () => {
   useEffect(() => {
     ls.set("characters", characters);
     ls.set("filterName", filterName);
-  }, [filterName, characters]);
+    ls.set("filterSpecies", filterSpecies);
+  }, [filterName, filterSpecies, characters]);
 
   function handleFilter(data) {
     if (data.key === "name") {
       return setFilterName(data.value);
+    } else if (data.key === "species") {
+      return setFilterSpecies(data.value);
     }
   }
 
-  const FilterCharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(filterName.toLowerCase());
-  });
+  const FilterCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(filterName.toLowerCase());
+    })
+    .filter((character) => {
+      if (filterSpecies === "") {
+        return true;
+      } else {
+        return character.species
+          .toLowerCase()
+          .includes(filterSpecies.toLowerCase());
+      }
+    });
 
   const renderCharacterDetail = (props) => {
     const characterId = props.match.params.characterId;
@@ -47,10 +63,13 @@ const App = () => {
     <Switch>
       <div>
         <Route exact path="/">
-          <Filters handleFilter={handleFilter} />
+          <Filters
+            handleFilter={handleFilter}
+            filterName={filterName}
+            filterSpecies={filterSpecies}
+          />
           <CharacterList characters={FilterCharacters} />
         </Route>
-
         <Route path="/character/:characterId" render={renderCharacterDetail} />
       </div>
     </Switch>

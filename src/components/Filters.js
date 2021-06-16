@@ -1,5 +1,6 @@
 import React from "react";
 import FilterByName from "./FilterByName";
+import FilterBySpecies from "./FilterBySpecies";
 
 const Filters = (props) => {
   const handleForm = (ev) => {
@@ -8,7 +9,14 @@ const Filters = (props) => {
   return (
     <section>
       <form onSubmit={handleForm}>
-        <FilterByName handleFilter={props.handleFilter} />
+        <FilterByName
+          handleFilter={props.handleFilter}
+          filterName={props.filterName}
+        />
+        <FilterBySpecies
+          handleFilter={props.handleFilter}
+          filterSpecies={props.filterSpecies}
+        />
       </form>
     </section>
   );
