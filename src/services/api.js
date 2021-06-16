@@ -10,6 +10,9 @@ const getDataFromAPI = () => {
           name: character.name,
           species: character.species,
           image: character.image,
+          origin: character.origin.name,
+          status: character.status,
+          episode: character.episode.length,
         };
       });
       console.log(cleanData);

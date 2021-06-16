@@ -28,10 +28,12 @@ const App = () => {
   const renderCharacterDetail = (props) => {
     const characterId = props.match.params.characterId;
     const foundCharacter = characters.find((character) => {
-      return character.id === characterId;
+      return character.id === parseInt(characterId);
     });
-
-    return <CharacterDetail character={foundCharacter} />;
+    console.log(foundCharacter);
+    if (foundCharacter !== undefined) {
+      return <CharacterDetail character={foundCharacter} />;
+    }
   };
   return (
     <Switch>
