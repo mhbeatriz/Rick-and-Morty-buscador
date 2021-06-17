@@ -1,6 +1,7 @@
 import React from "react";
 import CharacterCard from "./CharacterCard";
 import PropTypes from "prop-types";
+import notfound from "../images/notfound.png";
 
 const CharacterList = (props) => {
   const characterElements = props.characters.map((character) => {
@@ -12,7 +13,14 @@ const CharacterList = (props) => {
   });
   return (
     <section>
-      <ul className="list-characters">{characterElements}</ul>
+      {props.characters.length === 0 ? (
+        <div className="notfound">
+          <p className="tryagain">Prueba a escribir otro personaje</p>{" "}
+          <img src={notfound} className="img-notfound" />
+        </div>
+      ) : (
+        <ul className="list-characters">{characterElements}</ul>
+      )}
     </section>
   );
 };

@@ -22,7 +22,7 @@
   }
 }
 .song {
-  width: 100px;
+  width: 150px;
   height: 100px;
   transform: translate(-100%, -100%);
 }
@@ -236,4 +236,20 @@
   @media all and(min-width:768px) {
     margin-right: 20px;
   }
+}
+
+.notfound {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tryagain {
+  color: white;
+  font-size: 32px;
+}
+.img-notfound {
+  width: 300px;
+  height: 300px;
 }

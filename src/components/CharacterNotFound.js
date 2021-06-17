@@ -3,9 +3,9 @@ import notfound from "../images/notfound.png";
 
 const CharacterNotFound = () => {
   return (
-    <section>
-      <img src={notfound} />
-      <p>Lo siento este personaje no existe</p>
+    <section className="notfound">
+      <img src={notfound} className="img-notfound" />
+      <p className="tryagain">Lo siento este personaje no existe</p>
     </section>
   );
 };
