@@ -1,6 +1,6 @@
 
 # Buscador Rick and Morty <img src="./images/RickandMorty.png" />
-=======
+
 ![Rick_and_Morty_-_logo_(English)](https://user-images.githubusercontent.com/81681226/122187895-c115ab00-ce8f-11eb-84e6-cabbf450b4f7.png)
 
 
