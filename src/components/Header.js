@@ -1,8 +1,13 @@
 import logo from "../images/RickandMorty.png";
+import song from "../audio/song.mp3";
 
 const Header = () => {
   return (
     <div className="header">
+      <audio id="song" type="audio/mp3" controls autoPlay className="song">
+        {" "}
+        <source src={song} />
+      </audio>
       <img className="header-logo" src={logo} />
     </div>
   );
