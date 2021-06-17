@@ -1,4 +1,5 @@
 import logo from "../images/RickandMorty.png";
+
 const Header = () => {
   return (
     <div className="header">

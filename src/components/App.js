@@ -8,9 +8,10 @@ import CharacterDetail from "./CharacterDetail";
 import Header from "./Header";
 import Footer from "./Footer";
 import "../stylesheets/App.scss";
+import CharacterNotFound from "./CharacterNotFound";
 
 const App = () => {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState(ls.get("character", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
   const [filterSpecies, setFilterSpecies] = useState(
     ls.get("filterSpecies", "")
@@ -68,7 +69,7 @@ const App = () => {
     if (foundCharacter !== undefined) {
       return <CharacterDetail character={foundCharacter} />;
     } else {
-      return <p>Pruebe a buscar otro personaje</p>;
+      return <CharacterNotFound />;
     }
   };
   return (

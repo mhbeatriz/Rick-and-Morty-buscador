@@ -1,14 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import arrow from "../images/arrow.png";
 
 const CharacterDetail = (props) => {
   return (
     <div className="containerdetail">
       <Header />
-      <Link to="/">
-        <span className="go-back"> Volver</span>
+      <Link to="/" className="go-back">
+        {/* <span className="go-back-text">Volver</span> */}
+        <img src={arrow} className="go-back-image" />
       </Link>
+
       <div className="detail">
         <section>
           <img
@@ -22,12 +25,8 @@ const CharacterDetail = (props) => {
           <ul className="info-detail">
             <li className="detail-list">Status: {props.character.status}</li>
             <li className="detail-list">Specie: {props.character.species}</li>
-            <li className="detail-list">
-              Origin:{props.character.origin.name}
-            </li>
-            <li className="detail-list">
-              Episode:{props.character.episode.length}
-            </li>
+            <li className="detail-list">Origin: {props.character.origin}</li>
+            <li className="detail-list">Episode: {props.character.episode}</li>
           </ul>
         </section>
       </div>

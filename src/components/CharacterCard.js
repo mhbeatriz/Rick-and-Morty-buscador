@@ -10,11 +10,11 @@ const CharacterCard = (props) => {
           src={props.character.image}
           alt={`Foto de ${props.character.name}`}
         />
-        <section className="info-character">
-          <h3 className="name">{props.character.name}</h3>
-          <p className="species">{props.character.species}</p>
-        </section>
       </Link>
+      <section className="info-character">
+        <h3 className="name">{props.character.name}</h3>
+        <p className="species">{props.character.species}</p>
+      </section>
     </li>
   );
 };
