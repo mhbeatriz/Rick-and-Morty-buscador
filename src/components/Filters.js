@@ -1,6 +1,7 @@
 import React from "react";
 import FilterByName from "./FilterByName";
 import FilterBySpecies from "./FilterBySpecies";
+import FilterByLocation from "./FilterByLocation";
 
 const Filters = (props) => {
   const handleForm = (ev) => {
@@ -16,6 +17,10 @@ const Filters = (props) => {
         <FilterBySpecies
           handleFilter={props.handleFilter}
           filterSpecies={props.filterSpecies}
+        />
+        <FilterByLocation
+          handleFilter={props.handleFilter}
+          filterLocation={props.filterLocation}
         />
       </form>
     </section>

@@ -24,7 +24,11 @@
 .song {
   width: 150px;
   height: 100px;
-  transform: translate(-100%, -100%);
+  // transform: translate(-100%, -100%);
+  @media all and (min-width: 768px) {
+    width: 150px;
+    height: 100px;
+  }
 }
 
 .list-characters {

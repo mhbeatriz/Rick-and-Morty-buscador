@@ -16,6 +16,9 @@ const App = () => {
   const [filterSpecies, setFilterSpecies] = useState(
     ls.get("filterSpecies", "")
   );
+  const [filterLocation, setFilterLocation] = useState(
+    ls.get("filterLocation", "")
+  );
 
   //Llamada a la Api y ordenarla alfabéticamente
   useEffect(() => {
@@ -34,7 +37,8 @@ const App = () => {
     ls.set("characters", characters);
     ls.set("filterName", filterName);
     ls.set("filterSpecies", filterSpecies);
-  }, [filterName, filterSpecies, characters]);
+    ls.set("filterLocation", filterLocation);
+  }, [filterName, filterSpecies, filterLocation, characters]);
 
   //Filtrar por nombre y especie
   function handleFilter(data) {
@@ -42,6 +46,8 @@ const App = () => {
       return setFilterName(data.value);
     } else if (data.key === "species") {
       return setFilterSpecies(data.value);
+    } else if (data.key === "location") {
+      return setFilterLocation(data.value);
     }
   }
 
@@ -56,6 +62,15 @@ const App = () => {
         return character.species
           .toLowerCase()
           .includes(filterSpecies.toLowerCase());
+      }
+    })
+    .filter((character) => {
+      if (filterLocation === "") {
+        return true;
+      } else {
+        return character.location
+          .toLowerCase()
+          .includes(filterLocation.toLowerCase());
       }
     });
 
@@ -81,6 +96,7 @@ const App = () => {
             handleFilter={handleFilter}
             filterName={filterName}
             filterSpecies={filterSpecies}
+            filterLocation={filterLocation}
           />
           <CharacterList characters={FilterCharacters} />
         </Route>

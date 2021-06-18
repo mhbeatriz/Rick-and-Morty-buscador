@@ -14,6 +14,7 @@ const CharacterCard = (props) => {
       <section className="info-character">
         <h3 className="name">{props.character.name}</h3>
         <p className="species">{props.character.species}</p>
+        <p className="location">{props.character.location}</p>
       </section>
     </li>
   );

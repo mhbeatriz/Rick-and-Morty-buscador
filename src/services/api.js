@@ -13,6 +13,7 @@ const getDataFromAPI = () => {
           origin: character.origin.name,
           status: character.status,
           episode: character.episode.length,
+          location: character.location.name,
         };
       });
       console.log(cleanData);
