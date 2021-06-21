@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.56448108.chunk.css",
-    "main.js": "./static/js/main.55aeb505.chunk.js",
-    "main.js.map": "./static/js/main.55aeb505.chunk.js.map",
+    "main.css": "./static/css/main.ec551fa1.chunk.css",
+    "main.js": "./static/js/main.aa4f69e9.chunk.js",
+    "main.js.map": "./static/js/main.aa4f69e9.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.49e46645.js",
     "runtime-main.js.map": "./static/js/runtime-main.49e46645.js.map",
     "static/js/2.5750e83a.chunk.js": "./static/js/2.5750e83a.chunk.js",
     "static/js/2.5750e83a.chunk.js.map": "./static/js/2.5750e83a.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.56448108.chunk.css.map": "./static/css/main.56448108.chunk.css.map",
+    "static/css/main.ec551fa1.chunk.css.map": "./static/css/main.ec551fa1.chunk.css.map",
     "static/js/2.5750e83a.chunk.js.LICENSE.txt": "./static/js/2.5750e83a.chunk.js.LICENSE.txt",
     "static/media/RickandMorty.de13d484.png": "./static/media/RickandMorty.de13d484.png",
     "static/media/arrow.2054374e.png": "./static/media/arrow.2054374e.png",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.49e46645.js",
     "static/js/2.5750e83a.chunk.js",
-    "static/css/main.56448108.chunk.css",
-    "static/js/main.55aeb505.chunk.js"
+    "static/css/main.ec551fa1.chunk.css",
+    "static/js/main.aa4f69e9.chunk.js"
   ]
 }
